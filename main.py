@@ -114,7 +114,7 @@ async def complete_task(update: Update, context: CallbackContext):
         await query.edit_message_text("🚫 Tâche non trouvée.")
 
 def main():
-    app = Application.builder().token("8127156585:AAEwQeD0oHAQw6Cpcm0itODfYn48SfaiLYI").build()
+    app = Application.builder().token("").build()
     app.add_handler(CommandHandler('start', start))
     app.add_handler(CallbackQueryHandler(button_callback))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, add_task))
